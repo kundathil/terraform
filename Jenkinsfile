@@ -24,13 +24,12 @@ pipeline {
             }
         }
        
-       stage('Destroy') {
+       stage('Deploy') {
           steps
           {
 
-          sh "pwd ; terraform destroy -input=false tfplan" 
+          sh "pwd ; terraform apply -input=false tfplan" 
           }
-          
           
 
        }
