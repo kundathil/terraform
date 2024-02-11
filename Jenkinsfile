@@ -13,18 +13,7 @@ pipeline {
         label "terraform"
     }
    }
-    stages {
-        stage('checkout') {
-            steps {
-                 script{
-                        dir("terraform")
-                        {
-                            git "https://github.com/kundathil/terraform.git"
-                        }
-                    }
-                }
-            }
-
+    
         stage('Plan') {
             steps {
                 sh 'pwd;cd terraform/ ; terraform init'
@@ -33,7 +22,8 @@ pipeline {
             }
         }
        
-        
-    }
+    
+     
+    
 
   }
