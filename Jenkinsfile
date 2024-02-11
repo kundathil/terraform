@@ -24,6 +24,15 @@ pipeline {
             }
         }
        
+       stage('Deploy') {
+          steps
+          {
+
+          sh "pwd;cd terraform/ ; terraform apply -input=false tfplan" 
+          }
+          
+
+       }
     }
      
     
