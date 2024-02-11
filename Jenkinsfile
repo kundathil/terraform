@@ -6,7 +6,13 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_KEY')
     }
 
-   agent  any
+   agent   {
+
+    kubernetes {
+
+        label "terraform"
+    }
+   }
     stages {
         stage('checkout') {
             steps {
