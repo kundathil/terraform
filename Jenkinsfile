@@ -37,8 +37,8 @@ pipeline {
 
           sh "pwd ; terraform destroy all -input=false tfplan" 
           }
-          
-
+          }
+                        
 
        }
     }
