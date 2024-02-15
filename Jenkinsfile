@@ -30,8 +30,8 @@ pipeline {
 
           sh "pwd ; terraform apply -input=false tfplan" 
           }
-          
-          stage('Destroy') {
+       } 
+        stage('Destroy') {
           steps
           {
 
@@ -45,4 +45,4 @@ pipeline {
      
     
 
-  }
+  
