@@ -31,13 +31,13 @@ pipeline {
           sh "pwd ; terraform apply -input=false tfplan" 
           }
        } 
-   //     stage('Destroy') {
-     //     steps
-     //     {
+       stage('Destroy') {
+         steps
+          {
 
-     //     sh "pwd ; terraform apply -destroy -input=false tfplan" 
-     //     }
-      //    }
+         sh "pwd ; terraform apply -destroy -input=false tfplan" 
+          }
+          }
                         
 
        }
