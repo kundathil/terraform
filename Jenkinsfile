@@ -35,7 +35,7 @@ pipeline {
          steps
           {
 
-         sh "pwd ; terraform apply -destroy -input=false tfplan" 
+         sh "pwd ; terraform destroy -input=false tfplan" 
           }
           }
                         
